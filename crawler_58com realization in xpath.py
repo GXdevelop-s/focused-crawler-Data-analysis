@@ -23,7 +23,7 @@ if __name__ == '__main__':
     print(li_list)
     with open(r'../gotpages/58secondhand_houses.txt', 'w', encoding='utf-8') as stream:
         for li in li_list:
-            house_name = li.xpath('./span[@class="content-title"]/text()]')
+            house_name = li.xpath('.//span[@class="content-title"]/text()')[0]
             #print(house_name)
             stream.write(house_name)
             print(house_name)
