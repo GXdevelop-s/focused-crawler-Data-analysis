@@ -12,6 +12,7 @@ if __name__ == '__main__':
     head = {
         'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Mobile Safari/537.36'
     }
+
     page_text = requests.get(url=url, headers=head).text
     tree = etree.HTML(page_text)
     a_text_list = tree.xpath('//div[@class="hot"]//li/a/text() | //div[@class="all"]//div/li/a/text()')
